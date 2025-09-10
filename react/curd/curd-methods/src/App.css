@@ -1,0 +1,98 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* AddForm.css */
+
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1e1e2f;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+input {
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #2a2a3d;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border: 1px solid #6c63ff;
+  box-shadow: 0 0 6px rgba(108, 99, 255, 0.6);
+}
+
+button {
+  padding: 12px 20px;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #574fd6;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

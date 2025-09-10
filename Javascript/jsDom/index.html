@@ -1,0 +1,47 @@
+<div id="grandparent" style="padding:20px; border:2px solid red;">
+  Grandparent
+  <div id="parent" style="padding:20px; border:2px solid green;">
+    Parent
+    <button id="child">Click Me</button>
+  </div>
+</div>
+
+<script>
+ 
+
+   document.getElementById('grandparent').addEventListener("click", function(){
+       console.log(" grandparent");
+   });
+
+
+    document.getElementById('parent').addEventListener("click", function(){
+       console.log(" Parent");
+   });
+
+    document.getElementById('child').addEventListener("click", function(){
+       console.log(" child");
+   });
+   
+
+
+
+
+
+//   document.getElementById("grandparent").addEventListener(
+//     "click",
+//     () => console.log("Grandparent Capturing"),
+//     true // capturing enabled
+//   );
+
+//   document.getElementById("parent").addEventListener(
+//     "click",
+//     () => console.log("Parent Capturing"),
+//     true
+//   );
+
+//   document.getElementById("child").addEventListener(
+//     "click",
+//     () => console.log("Child Capturing"),
+//     true
+//   );
+</script>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 24px; text-transform: capitalize;font-family: arial, sans-serif;padding: 15px;">
+        In JavaScript, the sort() method is used to arrange the elements of an array in ascending or descending order.
+    </h1>
+    
+<script>
+
+// {if > resutl in postive then b comes fist and if result is negative a comes first}
+// accending order >  return a - b;
+// deaccending order >  return b - a
+
+//Sort the array [5, 2, 9, 1, 7] in ascending order.
+
+    let num = [5, 2, 9, 1,];
+
+    let numsort = num.sort();
+
+    console.log('numbers are : ', numsort)
+
+
+    let sortnum = [5, 2, 9, 1, 7,20.,200]
+
+    let result = sortnum.sort(function(a,b) {
+         return a - b;
+    });
+
+    console.log(result);;
+
+    let deaccending = sortnum.sort( (a,b) => {
+     
+        return b - a 
+
+    } )
+
+     console.log('deaccending order : ', deaccending)
+
+
+// Interview Questions 
+// Q1 > Find the loges words from here " bhuvan chander joshi javascript on web dev "
+// Q2 > add hass tag and remove white spece output should be  > #mynameisbhuvanchanderjsohi
+
+
+let name = " bhuvan chander joshi javascript on web dev ";
+
+let wordtrim = name.trim();
+let wordsplit = wordtrim.split( " ");
+
+let wordssort = wordsplit.sort((a,b) => {
+    return   b.length - a.length
+})
+
+console.log(wordssort[0]);
+
+
+let names = " my name is bhuvan chander jsohi ";
+
+let nametrim = names.trim();
+
+let namessplit = nametrim.split(" ").join("");
+
+console.log(`#${namessplit}`)
+
+
+</script>
+
+</body>

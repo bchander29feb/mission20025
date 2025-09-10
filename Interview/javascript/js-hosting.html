@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting</title>
+</head>
+
+
+<body>
+
+    <h1>In JavaScript, variable and function declarations are moved (“hoisted”) to the top of their scope (global or function scope) before execution.
+        But only the declarations are hoisted, not the initializations/assignments.
+    </h1>
+    
+
+    <script>
+    //In JavaScript, variable and function declarations are moved (“hoisted”) to the top of their scope (global or function scope) before execution.
+    //But only the declarations are hoisted, not the initializations/assignments.
+
+    // sayHello(); // ✅ Works
+
+    // function sayHello() {
+    //      console.log("Hello!");
+    // }
+
+    // console.log(a); // undefined (not error!)
+    // var a = 10;
+
+
+    // var a;      // declaration hoisted
+    // console.log(a); // undefined
+    // a = 10;     // assignment stays in place
+
+    
+    // console.log(b); // ❌  Cannot access 'b' before initialization
+    // let b = 20;
+
+    // console.log(c); // ❌  Cannot access 'c' before initialization
+    // const c = 30;
+    
+    // greet(); // ❌ Error: greet is not a function
+
+    // var greet = function() {
+    //     console.log("Hi!");
+    // };
+
+    // greet(); // ❌ Cannot access 'greet' before initialization
+    // let greet = function() {
+    // console.log("Hi!");
+    // };
+
+
+
+
+    </script>
+    
+</body>
+</html>

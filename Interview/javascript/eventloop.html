@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventloop</title>
+</head>
+
+
+<body>
+
+    <h1> 
+        JavaScript is single-threaded — it can only do one thing at a time.
+        But we still want asynchronous behavior (e.g., timers, network calls, DOM events).
+        The Event Loop is what makes async operations possible while keeping JS single-threaded.
+        The event loop in JavaScript is the mechanism that allows asynchronous code (like setTimeout, fetch, or promises) to run without blocking the main thread. 
+    </h1>
+    <h1>
+        Event Loop Rules Recap
+
+Call Stack → Executes synchronous code first.
+
+Microtask Queue → Higher priority (Promises, MutationObserver).
+
+Macrotask Queue (Callback Queue) → Lower priority (setTimeout, setInterval, setImmediate, I/O).
+    </h1>
+
+<script>
+    // JavaScript is single-threaded — it can only do one thing at a time.
+    // But we still want asynchronous behavior (e.g., timers, network calls, DOM events).
+
+    // The Event Loop is what makes async operations possible while keeping JS single-threaded.
+    //The event loop in JavaScript is the mechanism that allows asynchronous code (like setTimeout, fetch, or promises) to run without blocking the main thread.
+
+    // Event Loop Rules Recap
+    // Call Stack → Executes synchronous code first.
+    // Microtask Queue → Higher priority (Promises, MutationObserver).
+    // Macrotask Queue (Callback Queue) → Lower priority (setTimeout, setInterval, setImmediate, I/O).
+
+
+
+    // Promise.resolve().then(() => {
+    // console.log("First");
+    // return Promise.resolve();
+    // }).then(() => {
+    // console.log("Second");
+    // });
+    // console.log("Outside");
+
+
+    console.log("Start");
+    setTimeout(() => {
+    console.log("Timeout");
+    }, 0);
+    Promise.resolve().then(() => {
+    console.log("Promise");
+    });
+    console.log("End");
+
+
+
+</script>
+    
+</body>
+
+
+</html>

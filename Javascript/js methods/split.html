@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spkit</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 24px; text-transform: capitalize;font-family: arial, sans-serif;padding: 15px;">
+        In JavaScript, the split() method is used to divide a string into an array of substrings based on a specified separator
+    </h1>
+
+<script>
+
+// Split the string "apple,banana,orange" into an array of fruits.
+
+let fruits = 'banana,orange,apple';
+let farray = fruits.split();
+console.log('Added in array',farray );
+
+let fsplit = fruits.split("");
+
+console.log('split each word individually', fsplit )
+
+
+//"a-b-c-d" > Take "a-b-c-d" and split it into an array without the hyphens.
+
+let abc = "a-b-c-d";
+let abcsplit = abc.split("");
+
+console.log('abc split', abcsplit)
+
+//Given "hello world", split into characters.
+
+const str = "hello world";
+const chars = str.split("");
+console.log(chars);
+
+
+// Convert "one|two|three|four" into an array using split().
+
+let numch = "one|two|three|four";
+let onetwo = numch.split("|");
+console.log(onetwo);
+
+// Given "red green blue yellow", split into only the first 3 words.
+
+let conthree = "red green blue yellow";
+let threeword = conthree.split(" ", 3);
+console.log(threeword);
+
+//Extract the first name from "John Doe" using split().
+
+let frnam = "John Doe";
+let getname = frnam.split(" ",1);
+console.log(getname)
+
+//Reverse the words in "I am learning JS" using split() and reverse().
+
+let reversearray = "I am learning JS" ;
+let letreverse = reversearray.split(" ").reverse();
+   
+console.log(letreverse);
+
+
+//Given "2025-08-13", split it into year, month, and day.
+
+const date = "2025-08-13";
+const [year, month, day] = date.split("-");
+console.log(year);  // "2025"
+console.log(month); // "08"
+console.log(day);   // "13"
+
+//Take "React|Vue|Angular|Svelte" and get only the second element using split().
+
+const frameworks = "React|Vue|Angular|Svelte";
+const second = frameworks.split("|")[1];
+console.log(second); // "Vue"
+
+
+</script>
+
+</body>
+</html>
